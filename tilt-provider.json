@@ -1,0 +1,9 @@
+{
+  "plugin_name": "velero-plugin-for-huaweicloud",
+  "context": ".",
+  "image": "velero/velero-plugin-for-huaweicloud",
+  "live_reload_deps": [
+    "velero-plugin-for-huaweicloud"
+  ],
+  "go_main": "./velero-plugin-for-huaweicloud"
+}
