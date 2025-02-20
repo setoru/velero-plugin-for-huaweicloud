@@ -31,7 +31,7 @@ This plugin is used for saving and retrieving backup data on Huawei Cloud OBS as
     Clone the Velero plugin repository:
 
    ```sh
-   git clone https://gitee.com/HuaweiCloudDeveloper/huaweicloud-velero-plugins.git
+   git clone https://github.com/setoru/velero-plugin-for-huaweicloud.git
 	```
 
    Build the image:
@@ -40,10 +40,6 @@ This plugin is used for saving and retrieving backup data on Huawei Cloud OBS as
    cd velero-plugin-for-huaweicloud
    make container
    ```
-
-   Upload the image to SWR:
-
-   Refer to [Huawei Cloud SWR User Manual](https://support.huaweicloud.com/usermanual-swr/swr_01_0011.html).
 
 4. Create a new OBS bucket. The bucket should not contain other directories.
 
@@ -65,8 +61,8 @@ This plugin is used for saving and retrieving backup data on Huawei Cloud OBS as
 
    ```sh
    velero install \
-       --provider huaweicloud \
-       --plugins velero/velero-plugin-for-huaweicloud:v1.0.0 \
+       --provider huawei.com/huaweicloud \
+       --plugins swr.ap-southeast-1.myhuaweicloud.com/huaweiclouddeveloper/velero-plugin-for-huaweicloud:v1.0.0 \
        --bucket <Your Bucket> \
        --secret-file /home/velero/credentials-velero \
        --backup-location-config \
